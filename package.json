@@ -4,7 +4,7 @@
   "description": "cypress api testing",
   "main": "index.js",
   "scripts": {
-	"test": "cypress open"
+    "test": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,8 @@
     "url": "https://github.com/YassineFathallah/cypress-api-testing-poc/issues"
   },
   "homepage": "https://github.com/YassineFathallah/cypress-api-testing-poc#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "cypress": "^3.2.0"
   }
 }
