@@ -16,8 +16,7 @@
     "url": "https://github.com/YassineFathallah/cypress-api-testing-poc/issues"
   },
   "homepage": "https://github.com/YassineFathallah/cypress-api-testing-poc#readme",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "cypress": "^3.2.0"
   }
 }
