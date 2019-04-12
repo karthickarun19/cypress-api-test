@@ -6,3 +6,4 @@ a quick demo using fake api to see how cypress handle api testing
 2. run ``` npm run test ```
 3. wait for cypress to launch
 4. click on ```api_testing.spec.js```
+5. follow execution in the browser
