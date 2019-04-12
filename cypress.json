@@ -1,4 +1,5 @@
 {
-    "integrationFolder": "cypress/integration/tests",
+    "integrationFolder": "tests",
+    "fixturesFolder": "fixtures",
     "baseUrl": "https://www.metaweather.com/api/location/"
 }
