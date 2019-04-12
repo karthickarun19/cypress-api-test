@@ -1,8 +1,18 @@
-const casablancaId = 1532755
-const expectedTitle = 'Casablanca'
+const fixtureFileName = 'api_testing_data.json'
 
 context('Location information', () => {
-    const urlToTest = Cypress.config('baseUrl')
+    let casablancaId
+    let expectedTitle 
+    let urlToTest
+
+    // variable initialization before starting tests
+    before(() => {
+        cy.fixture(fixtureFileName).then((data) => {
+            expectedTitle = data.expectedTitle
+            casablancaId = data.cityId
+        })
+        urlToTest = Cypress.config('baseUrl')
+    })
 
     // negative test: test with non existent ID
     it('Search with non-existent ID', () => {
