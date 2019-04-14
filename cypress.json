@@ -1,5 +1,6 @@
 {
     "integrationFolder": "tests",
     "fixturesFolder": "fixtures",
-    "baseUrl": "https://www.metaweather.com/api/location/"
+    "baseUrl": "https://www.metaweather.com/api/location/",
+    "supportFile": "utils/index.js"
 }

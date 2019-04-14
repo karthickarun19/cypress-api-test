@@ -23,3 +23,11 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+Cypress.Commands.add('md5', (url) => {
+    return cy.request({
+      method: 'POST',
+      url: url
+    })
+    // this changes the subject to the body property from the cy.request object
+    .its("body")
+});
