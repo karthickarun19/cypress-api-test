@@ -1,5 +1,7 @@
 const fixtureFileName = 'api_testing_data.json'
 
+/// <reference types="cypress" />
+// @ts-check
 context('Location information', () => {
     let casablancaId
     let expectedTitle 
