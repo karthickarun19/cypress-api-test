@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const fixtureFileName = 'api_testing_data.json'
 
 /// <reference types="cypress" />
@@ -44,11 +46,24 @@ context('Location information', () => {
         cy.request({
             method: 'GET',
             url: Cypress.config('baseUrl') + casablancaId,
-            failOnStatusCode: false
+            failOnStatusCode: false           
         }).then(({body}) => {
             expect(body.consolidated_weather.length).to.equal(6, '6 days worth of data should be returned')
             expect(body.title).to.equal(expectedTitle, 'title should match')
             expect(body.woeid).to.equal(casablancaId, 'woeid should match')
+        })
+    })
+
+  
+    it('Search with Valid ID: Chennai', () => {
+        cy.request({
+            method: 'GET',
+            url: Cypress.config('baseUrl') + '2295424',
+            failOnStatusCode: false           
+        }).then(({body}) => {
+            expect(body.consolidated_weather.length).to.equal(6, '6 days worth of data should be returned')
+            expect(body.title).to.equal(body.title, process.env.chennaiexpectedTitle)
+            expect(body.woeid).to.equal(body.woeid, process.env.chennaicityId)
         })
     })
 })
